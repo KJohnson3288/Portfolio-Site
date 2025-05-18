@@ -1,24 +1,418 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Github Practice</h1>
-    <ul>
-        <li>Hello World</li>
-        <li id="pracList"></li>
-        <li>Me Three</li>
-    </ul>
+  </head>
+  <body>
+  <!-- Nav Section Start -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+          <ul class="navbar-nav nav-underline">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-section">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#resume-section">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#project-section">Projects</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#contact-section">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- Nav Section End -->
 
-    <h3 id="mini-title"></h3>
+
+  <!-- Hero Section Start -->
+    <section class="container-fluid my-4 py-5" id="hero-section">
+      <div class="row justify-content-evenly bg-white bg-gradient">
+        <div class="col-7 align-content-center" id="hero-description">
+          <div class="row text-center slide-in delay-0">
+            <h1 class="display-4">Hi, I'm <span class="fw-normal" id="hero-name">Kyle Johnson</span></h1>
+          </div>
+          <div class="row text-center slide-in delay-1">
+            <p class="lead">Game Developer & Web Developer</p>
+          </div>
+          <div class="row text-center slide-in delay-2">
+            <p class="text-muted">Game developer and web creator using Unity, C#, Bootstrap, and JavaScript to build interactive and responsive experiences.</p>
+          </div>
+        </div>
+        <div class="col-3" id="hero-image">
+          <img src="./images/profile-main.png" class="img-fluid" alt="...">
+        </div>
+      </div>
+    </section>
+  <!-- Hero Section End -->
+
+
+  <!-- About Me Section Start -->
+    <section class="container-fluid my-4 px-2" id="about-section">
+      <div class="row section-title bg-white bg-gradient">
+        <h1 class="display-3 fw-normal">About Me</h1>
+      </div>
+      <div class="row justify-content-evenly py-4 bg-black bg-gradient" id="about-carousel-container">
+        <div class="col-lg-8" id="about-carousel">
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card text-bg-dark">
+                  <img src="./images/profile-aspire.png" class="card-img" alt="...">
+                  <!-- Slide One -->
+                  <div class="card-img-overlay">
+                    <div class="col" id="about-dev">
+                      <div class="row text-center">
+                        <h2 class="card-title">Aspiring Developer</h2>
+                      </div>
+                      <div class="row text-center">
+                        <p class="card-text">A developer that enjoys turning ideas into interactive projects one line of code at a time.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card text-bg-dark">
+                  <img src="./images/profile-gaming.png" class="card-img" alt="...">
+                  <div class="card-img-overlay">
+                    <!-- Slide Two -->
+                    <div class="col" id="about-gamer">
+                      <div class="row text-center">
+                        <h2 class="card-title">A Passionate Gamer</h2>
+                      </div>
+                      <div class="row text-center">
+                        <p class="card-text">Gaming has always inspired me. It fuels my creativity and drives my desire to create interactive experiences of my own.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card text-bg-dark">
+                  <img src="./images/profle-Study.png" class="card-img" alt="...">
+                  <div class="card-img-overlay">
+                    <!-- Slide Three -->
+                    <div class="col" id="about-growth">
+                      <div class="row text-center">
+                        <h2 class="card-title">Dedicated to Growth and Learning</h2>
+                      </div>
+                      <div class="row text-center">
+                        <p class="card-text">I'm committed to growing every day as a developer learning new tools, improving my skills, and building a strong foundation for the future.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- About Me Section End -->
+
+
+  <!-- Resume Section Start -->
+    <section class="container-fluid my-4 px-2 pb-4" id="resume-section">
+      <div class="row section-title"bg-white bg-gradient>
+        <h1 class="display-3 fw-normal">Resume</h1>
+      </div>
+
+      <div class="row justify-content-evenly" id="resume-row">
+
+        <!-- Resume Column Left -->
+        <div class="col-4 bg-white" id="resume-summary-section">
+          <div class="card my-3">
+            <img src="./images/profile-spouse.jpg" class="card-img-top" alt="..." id="resume-summary-img">
+            <div class="card-body">
+              <h2 class="card-title">Professional Summary</h2>
+              <p class="card-text">Hi, I’m Kyle Johnson, a developer passionate about game development and web design. I’m building projects with C#, Unity 2D, HTML, CSS, JavaScript, and Bootstrap, always learning and growing to create meaningful, interactive experiences.</p>
+            </div>  
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Technical Skills</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+              <ul>
+                <li>C# Programming</li>
+                <li>Asp.Net / Razor Pages</li>
+                <li>HTML / CSS</li>
+                <li>Javascript</li>
+                <li>React</li>
+                <li>Unity</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resume Column Right -->
+        <div class="col-7" id="resume-history-section">
+
+          <!-- Resume Section -->
+          <div class="row p-4 mb-3 justify-content-evenly bg-white" id="resume-history-description">
+            <div class="row"><h3 class="text-decoration-underline">Experience</h3></div>
+
+            <!-- Work History Current -->
+            <div class="row">
+              <div class="row"><h5>Offline Customer Support Rep | Spectrum</h5></div>
+              <dl>
+                <dt><h6>Responsibilities:</h6></dt>
+                <dd>Respond to inquiries and resolve issues via email and support tickets, including technical troubleshooting, billing concerns, and account management.</dd>
+                <dd>Maintain detailed records of customer interactions and ensure issues are resolved satisfactorily, including follow-up communications.</dd>
+              </dl>
+            </div>
+
+            <!-- Work History Past -->
+            <div class="row">
+              <div class="row"><h5>Help Desk Business Technician Rep 1, Rep 2 | Spectrum</h5></div>
+              <dl>
+                <dt><h6>Responsibilities:</h6></dt>
+                <dd>Assist small to medium-sized business (SMB) customers with basic troubleshooting for internet, phone, and TV services, resolving connectivity issues, and equipment setup.</dd>
+                <dd>Provide friendly and professional customer service by addressing inquiries and concerns efficiently, accurately documenting interactions and technical issues, and escalating complex problems to higher-level technicians as needed.</dd>
+                <dd>Provide in-depth troubleshooting and repair for more complex issues faced by SMB customers, including network diagnostics and advanced equipment configurations.</dd>
+                <dd>Support and guide Tech Rep 1 team members, sharing knowledge and best practices for effective problem resolution.</dd>
+              </dl>
+            </div>
+            
+          </div>
+
+          <!-- Resume Education Section -->
+          <div class="row p-3 mb-3 justify-content-evenly bg-white" id="resume-education-section">
+            <div class="row"><h3 class="text-decoration-underline">Education</h3></div>
+
+            <!-- Current Education -->
+            <div class="col">
+              <dl class="row px-3">
+                <dt class="col-sm-3"><h5>Degree:</h5></dt>
+                <dd class="col-sm-9"><p>Associate of Science in Computer Information Science</p></dd>
+                <dt class="col-sm-3"><h5>Major:</h5></dt>
+                <dd class="col-sm-9"><p>Computer Programming and Data Analysis</p></dd>
+                <dt class="col-sm-3"><h5>School:</h5></dt>
+                <dd class="col-sm-9"><p>Seminole State University - Sanford, FL</p></dd>
+              </dl>
+            </div>
+
+            <!-- Past Education -->
+            <div class="col">
+              <dl class="row px-3">
+                <dt class="col-sm-3"><h5>Degree:</h5></dt>
+                <dd class="col-sm-9"><p>Associate of Science in Computer Information Science</p></dd>
+                <dt class="col-sm-3"><h5>Major:</h5></dt>
+                <dd class="col-sm-9"><p>Software Development</p></dd> 
+                <dt class="col-sm-3"><h5>School:</h5></dt>
+                <dd class="col-sm-9"><p>ECPI University Online - Virginia Beach, VA</p></dd>
+              </dl>
+            </div>
+
+          </div>
+
+          <!-- Resume Certification Section -->
+          <div class="row p-3 justify-content-evenly bg-white" id="resume-certs-section">
+            <div class="row"><h3 class="text-decoration-underline">Certifications</h3></div> 
+            <div class="col">
+              <dl class="row px-3">
+                <dt class="col-sm-2"><h5>Cert:</h5></dt>
+                <dd class="col-sm-9"><p>Full-Stack (MERN) Web Development - Certificate 	</p></dd>
+                <dt class="col-sm-2"><h5>Course:</h5></dt>
+                <dd class="col-sm-9"><p>University of North Carolina, Charlotte</p></dd>
+              </dl>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  <!-- Resume Section End -->
+    
+  
+  <!-- Project Section Start -->
+  <section class="container-fluid my-4" id="project-section">
+    <div class="row section-title"bg-white bg-gradient>
+      <h1 class="display-3 text fw-normal">My Projects</h1>
+    </div>
+
+    <!-- Project Summary Section -->
+    <div class="row my-3 justify-content-center bg-black bg-gradient text-light" id="current-project" data-bs-theme="dark">
+      <div class="row text-center">
+        <h4 class="display-5 mb-3">What am I working on?</h4>
+      </div>
+
+      <dl class="row col-md-8">
+        <dd>My next project is a multi-page game review website built using ASP.NET Razor Pages, designed to showcase game reviews, ratings, and my personal insights. It serves as both a portfolio piece and a hands-on way to deepen skills in C# and web development.</dd>
+        <dd>In parallel with this web project, I’m also beginning to learn turn-based game mechanics using Unity 2D, working toward creating gameplay systems inspired by titles like Shining Force, Final Fantasy, and Persona.</dd>
+      </dl>
+      
+      <div class="row col-md-8 mb-3">
+          <p class="card-text"><medium class="text-body-secondary">Last updated: May 17, 2025</medium></p>
+      </div>
+    </div>
+
+    <!-- Projects List -->
+    <div class="row justify-content-center" id="project-card">
+      <div class="col-8 card my-3" id="project-card-img">
+        <img src="https://placehold.co/400x200" class="card-img-top img-fluid mt-2" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Project title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <a href="">You can see more here >>> Link to github</a>
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
+  <!-- Project Section End -->
+
+
+  <!-- Contact Section Start -->
+  <section class="container-fluid my-4" id="contact-section">
+    <div class="row section-title"bg-white bg-gradient>
+      <h1 class="display-3 text fw-normal">Contact Me</h1>
+    </div>
+
+    <!-- Contact Section Left: Social Media -->
+     <div class="row justify-content-evenly py-3" id="contact-form-container">
+      
+      <div class="col-5" id="contact-section-left">
+        <div class="row text-center text-decoration-underline py-2" id="socila-links">
+          <h2>My Socials</h2>
+        </div>
+
+        <!-- Github Link -->
+        <div class="row text-center my-5" id="my-github">
+          <a href="https://github.com/KJohnson3288" target="_blank" class="me-3">
+           <i class="fa-brands fa-github fa-5x icon-link"></i>
+          </a>
+          <h5>Github: KJohnson3288</h5>
+        </div>
+
+        <!-- LinkedIn Link -->
+         <div class="row text-center my-5" id="my-linkedin">
+          <a href="https://www.linkedin.com/in/kjohnson3288/" target="_blank" class="me-3">
+            <i class="fab fa-linkedin fa-5x icon-link"></i>
+          </a>
+          <h5>LinkedIn: KJohnson3288</h5>
+        </div>
+
+        <!-- Youtube Link -->
+        <div class="row text-center my-5" id="my-youtube">
+          <a href="https://www.youtube.com/@kazzuall_gamer/videos" target="_blank" class="me-3">
+            <i class="fab fa-youtube fa-5x icon-link"></i>
+          </a>
+          <h5>Youtube:Kazzuall_Gamer</h5>
+        </div>
+
+      </div>
+
+      <div class="col-5" id="contact-section-right">
+
+        <div class="row text-center text-decoration-underline py-2">
+          <h2>Send an Email</h2>
+        </div>
+
+        <div class="row my-3">
+          <form action="">
+
+            <!-- Name Input -->
+            <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Name:</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" id="inputEmail3">
+              </div>
+            </div>
+
+            <!-- Email Input -->
+             <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Email:</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" id="inputEmail3">
+              </div>
+            </div>
+
+            <!-- Subject Input -->
+            <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Subject:</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" id="inputEmail3">
+              </div>
+            </div>
+
+            <!-- Message Input -->
+            <div class="row">
+              <div class="col-2 mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
+              </div>
+              <div class="col-9">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="row justify-content-center m-5">
+              <button type="submit" class="btn btn-dark">Send</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+     </div>
+
+  </section>
+  <!-- Contact Section End -->
 
 
 
 
-    <script src="script.js"></script>
-</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Section Start -->
+     <nav class="navbar bg-body-tertiary sticky-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+      </div>
+    </nav>
+    <!-- Footer Section End -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha38h5-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </body>
 </html>
