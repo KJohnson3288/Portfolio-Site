@@ -132,12 +132,41 @@ body {
     box-shadow: 4px 4px 8px black;
 }
 
+
+
 /* Project Section */
 #project-section {
     min-height: 500px;
     width: 100%;
     background-color: white;
 }
+
+.shining-gradient {
+  font-weight: bold;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f8d7ff 30%,
+    #a64bf4 50%,
+    #f8d7ff 70%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
 
 #current-project {
     border-width: 0px;
@@ -151,6 +180,9 @@ body {
     min-height: 500px;
     box-shadow: 4px 4px 8px gray;
 }
+
+
+
 
 /* Contact Section */
 #contact-section {
