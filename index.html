@@ -42,7 +42,7 @@
 
   <!-- Hero Section Start -->
     <section class="container-fluid my-4 py-5" id="hero-section">
-      <div class="row justify-content-evenly bg-white bg-gradient">
+      <div class="row justify-content-evenly bg-white bg-gradient flex-row flex-column-custom">
         <div class="col-7 align-content-center" id="hero-description">
           <div class="row text-center slide-in delay-0">
             <h1 class="display-4">Hi, I'm <span class="fw-normal" id="hero-name">Kyle Johnson</span></h1>
@@ -68,7 +68,7 @@
         <h1 class="display-3 fw-normal">About Me</h1>
       </div>
       <div class="row justify-content-evenly py-4 bg-black bg-gradient" id="about-carousel-container">
-        <div class="col-lg-8" id="about-carousel">
+        <div class="col-lg-8 col-12" id="about-carousel">
           <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -144,7 +144,7 @@
       <div class="row justify-content-evenly" id="resume-row">
 
         <!-- Resume Column Left -->
-        <div class="col-4 bg-white" id="resume-summary-section">
+        <div class="col-md-4 col-12 bg-white" id="resume-summary-section">
           <div class="card my-3">
             <img src="./images/profile-spouse.jpg" class="card-img-top" alt="..." id="resume-summary-img">
             <div class="card-body">
@@ -170,7 +170,7 @@
         </div>
 
         <!-- Resume Column Right -->
-        <div class="col-7" id="resume-history-section">
+        <div class="col-md-7 col-12" id="resume-history-section">
 
           <!-- Resume Section -->
           <div class="row p-4 mb-3 justify-content-evenly bg-white" id="resume-history-description">
@@ -259,23 +259,23 @@
 
     <!-- Project Summary Section -->
     <div class="row my-3 justify-content-center bg-black bg-gradient text-light" id="current-project" data-bs-theme="dark">
-      <div class="row text-center">
+      <div class="col-12 text-center">
         <h4 class="display-5 mb-3">What am I working on?</h4>
       </div>
 
-      <dl class="row col-md-8">
+      <dl class="row col-md-8 col-12">
         <dd>My next project is a multi-page game review website built using ASP.NET Razor Pages, designed to showcase game reviews, ratings, and my personal insights. It serves as both a portfolio piece and a hands-on way to deepen skills in C# and web development.</dd>
         <dd>In parallel with this web project, I’m also beginning to learn turn-based game mechanics using Unity 2D, working toward creating gameplay systems inspired by titles like Shining Force, Final Fantasy, and Persona.</dd>
       </dl>
       
-      <div class="row col-md-8 mb-3">
+      <div class="row col-md-8 col-12 mb-3">
           <p class="card-text"><medium class="text-body-secondary">Last updated: May 17, 2025</medium></p>
       </div>
     </div>
 
     <!-- Projects List -->
     <div class="row justify-content-center" id="project-card">
-      <div class="col-8 card my-3" id="project-card-img">
+      <div class="col-md-8 col-12 card my-3" id="project-card-img">
         <img src="https://placehold.co/400x200" class="card-img-top img-fluid mt-2" alt="...">
         <div class="card-body">
           <h5 class="card-title">Project title</h5>
@@ -299,7 +299,7 @@
     <!-- Contact Section Left: Social Media -->
      <div class="row justify-content-evenly py-3" id="contact-form-container">
       
-      <div class="col-5" id="contact-section-left">
+      <div class="col-md-5 col-12 mb-4 mb-md-0" id="contact-section-left">
         <div class="row text-center text-decoration-underline py-2" id="socila-links">
           <h2>My Socials</h2>
         </div>
@@ -330,7 +330,8 @@
 
       </div>
 
-      <div class="col-5" id="contact-section-right">
+      <!-- Contact Section Right: Email -->
+      <div class="col-md-5 col-12" id="contact-section-right">
 
         <div class="row text-center text-decoration-underline py-2">
           <h2>Send an Email</h2>
