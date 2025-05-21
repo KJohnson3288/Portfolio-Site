@@ -31,7 +31,7 @@ body {
     box-shadow: 3px 3px 6px black;
 }
 
-/* Hero Section Animation */
+/* Slide in Animation */
 .slide-in {
   opacity: 0;
   transform: translateX(-150px);
@@ -57,6 +57,10 @@ body {
   animation-delay: 0.6s;
 }
 
+.delay-3 {
+  animation-delay: 0.8s;
+}
+
 @media (max-width: 500px) {
   .flex-column-custom {
     flex-direction: column !important;
@@ -68,6 +72,8 @@ body {
     margin-top: 1rem;
   }
 }
+
+
 
 
 
@@ -94,6 +100,18 @@ body {
   height: 500px;
   object-fit: cover;
   width: 100%;
+}
+
+/* Card Fade In Animation */
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #about-dev {
@@ -141,6 +159,7 @@ body {
     background-color: white;
 }
 
+/* Project Summary Shining Gradient Effect */
 .shining-gradient {
   font-weight: bold;
   background: linear-gradient(
@@ -181,6 +200,17 @@ body {
     box-shadow: 4px 4px 8px gray;
 }
 
+/* Project Card Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 
@@ -200,5 +230,19 @@ body {
     min-height: 500px;
     box-shadow: 4px 4px 8px gray;
 }
+
+/* Contact section Animation */
+.fade-pulse {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Visible state */
+.fade-pulse.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
 
 

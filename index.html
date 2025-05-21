@@ -68,7 +68,7 @@
         <h1 class="display-3 fw-normal">About Me</h1>
       </div>
       <div class="row justify-content-evenly py-4 bg-black bg-gradient" id="about-carousel-container">
-        <div class="col-lg-8 col-12" id="about-carousel">
+        <div class="col-lg-8 fade-slide-up" id="about-carousel">
           <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -144,7 +144,7 @@
       <div class="row justify-content-evenly" id="resume-row">
 
         <!-- Resume Column Left -->
-        <div class="col-md-4 col-12 bg-white" id="resume-summary-section">
+        <div class="col-md-4 col-12 bg-white slide-in" id="resume-summary-section">
           <div class="card my-3">
             <img src="./images/profile-spouse.jpg" class="card-img-top" alt="..." id="resume-summary-img">
             <div class="card-body">
@@ -173,7 +173,7 @@
         <div class="col-md-7 col-12" id="resume-history-section">
 
           <!-- Resume Section -->
-          <div class="row p-4 mb-3 justify-content-evenly bg-white" id="resume-history-description">
+          <div class="row p-4 mb-3 justify-content-evenly bg-white slide-in delay-1" id="resume-history-description">
             <div class="row"><h3 class="text-decoration-underline">Experience</h3></div>
 
             <!-- Work History Current -->
@@ -201,7 +201,7 @@
           </div>
 
           <!-- Resume Education Section -->
-          <div class="row p-3 mb-3 justify-content-evenly bg-white" id="resume-education-section">
+          <div class="row p-3 mb-3 justify-content-evenly bg-white slide-in delay-2" id="resume-education-section">
             <div class="row"><h3 class="text-decoration-underline">Education</h3></div>
 
             <!-- Current Education -->
@@ -231,7 +231,7 @@
           </div>
 
           <!-- Resume Certification Section -->
-          <div class="row p-3 justify-content-evenly bg-white" id="resume-certs-section">
+          <div class="row p-3 justify-content-evenly bg-white slide-in delay-3" id="resume-certs-section">
             <div class="row"><h3 class="text-decoration-underline">Certifications</h3></div> 
             <div class="col">
               <dl class="row px-3">
@@ -280,17 +280,16 @@
 
     <!-- Projects List -->
     <div class="row justify-content-center" id="project-card">
-      <div class="col-md-8 col-12 card my-3" id="project-card-img">
-        <img src="https://placehold.co/400x200" class="card-img-top img-fluid mt-2" alt="...">
+      <div class="col-8 card my-3 animate-on-scroll" id="project-card-img">
+        <img src="https://placehold.co/400x200" class="card-img-top img-fluid mt-2" alt="Card displaying project">
         <div class="card-body">
-          <h5 class="card-title">Project title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <a href="">You can see more here >>> Link to github</a>
+          <h5 class="card-title">Coming Soon....</h5>
+          <p class="card-text">Projects will be coming soon</p>
+          <a href="https://github.com/KJohnson3288?tab=repositories">You can see more here >>> Link to github</a>
         </div>
       </div>
     </div>
 
-    
   </section>
   <!-- Project Section End -->
 
@@ -304,7 +303,8 @@
     <!-- Contact Section Left: Social Media -->
      <div class="row justify-content-evenly py-3" id="contact-form-container">
       
-      <div class="col-md-5 col-12 mb-4 mb-md-0" id="contact-section-left">
+      <div class="col-md-5 col-12 mb-4 mb-md-0 fade-pulse" id="contact-section-left">
+
         <div class="row text-center text-decoration-underline py-2" id="socila-links">
           <h2>My Socials</h2>
         </div>
@@ -336,46 +336,47 @@
       </div>
 
       <!-- Contact Section Right: Email -->
-      <div class="col-md-5 col-12" id="contact-section-right">
+      <div class="col-md-5 col-12 fade-pulse" id="contact-section-right">
 
         <div class="row text-center text-decoration-underline py-2">
           <h2>Send an Email</h2>
         </div>
 
         <div class="row my-3">
-          <form action="">
+          <!-- Contact Form -->
+          <form action="submit" id="contact-form">
 
             <!-- Name Input -->
             <div class="row mb-3">
-              <label for="inputEmail3" class="col-sm-2 col-form-label">Name:</label>
+              <label for="inputName" class="col-sm-2 col-form-label">Name:</label>
               <div class="col-sm-9">
-                <input type="email" class="form-control" id="inputEmail3">
+                <input type="text" name="name" class="form-control" id="inputName" required>
               </div>
             </div>
 
             <!-- Email Input -->
              <div class="row mb-3">
-              <label for="inputEmail3" class="col-sm-2 col-form-label">Email:</label>
+              <label for="inputEmail" class="col-sm-2 col-form-label">Email:</label>
               <div class="col-sm-9">
-                <input type="email" class="form-control" id="inputEmail3">
+                <input type="email" name="email" class="form-control" id="inputEmail" required> 
               </div>
             </div>
 
             <!-- Subject Input -->
             <div class="row mb-3">
-              <label for="inputEmail3" class="col-sm-2 col-form-label">Subject:</label>
+              <label for="inputSubject" class="col-sm-2 col-form-label">Subject:</label>
               <div class="col-sm-9">
-                <input type="email" class="form-control" id="inputEmail3">
+                <input type="text" name="subject" class="form-control" id="inputSubject" required>
               </div>
             </div>
 
             <!-- Message Input -->
             <div class="row">
               <div class="col-2 mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
+                <label for="FormControlTextarea" class="form-label">Message:</label>
               </div>
               <div class="col-9">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                <textarea class="form-control" name="message" id="FormControlTextarea" rows="4" required></textarea>
               </div>
             </div>
 
@@ -392,6 +393,20 @@
 
   </section>
   <!-- Contact Section End -->
+
+
+  <!-- Toast Container -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1055">
+    <div id="form-toast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toast-message">
+          Email sent successfully!
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
 
 
 
@@ -419,6 +434,20 @@
       </div>
     </nav>
     <!-- Footer Section End -->
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha38h5-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+    <!-- Script.js -->
+    <script src="./script.js"></script>
+
+    <!-- Email.JS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("ejuTPpo_1rLoO78On");
+      })();
+    </script>
+
   </body>
 </html>
